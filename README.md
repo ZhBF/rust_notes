@@ -31,8 +31,11 @@ $ cargo check
 
 ## Well-known Rust Projects
 
-- [rustdesk](https://github.com/rustdesk/rustdesk): An open-source remote desktop application.
-- [veloren](https://github.com/veloren/veloren): An open world, open source voxel RPG.
+- [rustdesk](https://rustdesk.com/): An open-source remote desktop application.
+- [veloren](https://veloren.net/): An open world, open source voxel RPG.
+- [tauri](https://tauri.app/): Build smaller, faster, and more secure desktop and mobile applications with a web frontend.
+- [uv](https://docs.astral.sh/uv/): An extremely fast Python package and project manager.
+- [bevy](https://bevy.org/): A refreshingly simple data-driven game engine.
 
 ## Reference
 
