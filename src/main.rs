@@ -1,10 +1,15 @@
+use rand;
 
-// The entry point of the program
+
 fn main() {
-    learn_print_lines();
-    learn_data_types();
+    learn_common_concepts();
 }
 
+fn learn_common_concepts() {
+    learn_print_lines();
+    learn_data_types();
+    learn_control_flow();
+}
 
 fn learn_print_lines() {
     println!("Hello, world!");
@@ -14,6 +19,11 @@ fn learn_print_lines() {
 fn learn_data_types() {
     learn_scalar_types();
     learn_compound_types();
+}
+
+fn learn_control_flow() {
+    learn_if_else();
+    learn_repetitions();
 }
 
 fn learn_scalar_types() {
@@ -26,6 +36,61 @@ fn learn_scalar_types() {
 fn learn_compound_types() {
     learn_tuple_types();
     learn_array_types();
+}
+
+fn learn_if_else() {
+    let a = rand::random::<i32>() % 10;
+    if a < 5 {
+        println!("a is less than 5");
+    } else if a == 5 {
+        println!("a is equal to 5");
+    } else {
+        println!("a is greater than 5");
+    }
+
+    let b = if a % 2 == 0 { "even" } else { "odd" };
+    println!("a is {}", b);
+}
+
+fn learn_repetitions() {
+    learn_loop();
+    learn_while();
+}
+
+fn learn_loop() {
+    let mut c1 = 0;
+    let mut c2;
+    let c3 = 'loop_0: loop {
+        c1 +=1;
+        c2 = 0;
+        loop {
+            c2 += 1;
+            if c2 == 10 {
+                break;
+            }
+            if c1 == 5 {
+                break 'loop_0 c1 + c2;
+            }
+        }
+    };
+    println!("c1: {}, c2: {}, c3: {}", c1, c2, c3);
+}
+
+fn learn_while() {
+    let mut c = 3;
+    while c != 0 {
+        println!("c: {}", c);
+        c -= 1;
+    }
+
+    let a = [10, 20, 30, 40, 50];
+    for element in a {
+        println!("the value is: {}", element);
+    }
+
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
 }
 
 fn learn_integer_types() {
@@ -127,3 +192,8 @@ fn learn_array_types() {
     let arr_default: [i32; 5] = [0; 5];
     println!("The array with default values is: {:?}", arr_default);
 }
+
+
+
+
+
